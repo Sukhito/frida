@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html ng-app="frida">
+    <head>
+        <title>Frida</title>
+        <script src="components/angular/angular.js"></script>
+        <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="components/jquery/dist/jquery.js"></script>
+        <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+        <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/app.js"></script>
+        
+        <script src="js/items/controller.js"></script>
+        <script src="js/items/service.js"></script>
+
+        <script src="js/receipts/controller.js"></script>
+        <script src="js/receipts/service.js"></script>
+
+        <script src="js/sales/controller.js"></script>
+        <script src="js/sales/service.js"></script>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div ui-view></div>
+        </div>
+</html>

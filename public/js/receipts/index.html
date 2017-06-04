@@ -1,0 +1,18 @@
+<button class="btn btn-primary" ui-sref="nav">home</button>
+<input ng-model="search.name"><button class="btn btn-success" ng-click="newReceipt()">Barang Masuk</button>
+<table class="table table-hover table-nonfluid small">
+    <tr ng-repeat="receipt in receipts|startFrom :(currentPage - 1)*pageSize|limitTo:pageSize" ng-click="selectReceipt(receipt)">
+        <td>{{receipt.date | date:'HH:mm MMM dd,  yyyy'}}</td>
+        <td>
+            <table class="table table-borderless">
+                <tr ng-repeat="receiptItem in receipt.receiptItems">
+                    <td>{{receiptItem.item.name}}</td> 
+                    <td><strong class="text-danger">{{receiptItem.item.code}}</strong></td>
+                    <td>{{receiptItem.qty}} potong</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<ul uib-pagination total-items="receipts.length" ng-model="currentPage" items-per-page="pageSize"></ul>

@@ -1,0 +1,10 @@
+<button class="btn btn-primary" ui-sref="nav">home</button>
+<input ng-model="query"><button class="btn btn-success" ng-click="newItem()">Tambah Barang</button>
+<table class="table table-hover table-nonfluid small">
+    <tr ng-repeat="item in items|filter:search| limitTo:15" ng-click="selectItem(item)">
+        <td>{{item.name}}</td>
+        <td>{{item.code}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.balance}}</td>
+    </tr>
+</table>

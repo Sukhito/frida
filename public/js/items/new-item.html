@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <button class="btn btn-success" type="button" ng-click="save()">Save</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()">Cancel</button>
+</div>
+<div class="modal-body" id="modal-body">
+    <table class="table table-bordered">
+        <tr>
+            <td>Nama</td>
+            <td><input class="form-control" type="text" ng-model="item.name"></td>
+        </tr>
+        <tr>
+            <td>Kode</td>
+            <td><input class="form-control" type="text" ng-model="item.code"></td>
+        </tr>
+        <tr>
+            <td>Harga</td>
+            <td><input class="form-control" type="number" ng-model="item.price"></td>
+        </tr>
+    </table>
+</div>

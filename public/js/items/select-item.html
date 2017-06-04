@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <button class="btn btn-primary" type="button" ng-click="edit()" ng-hide="editMode">Edit</button>
+    <button class="btn btn-success" type="button" ng-click="save()" ng-show="editMode">Save</button>
+    <button class="btn btn-danger" type="button" ng-click="cancel()" ng-show="editMode">Cancel</button>
+</div>
+<div class="modal-body" id="modal-body">
+    <table class="table table-bordered">
+        <tr>
+            <td>Nama</td>
+            <td ng-hide="editMode">{{item.name}}</td>
+            <td ng-show="editMode"><input class="form-control" type="text" ng-model="item.name"></td>
+        </tr>
+        <tr>
+            <td>Kode</td>
+            <td ng-hide="editMode">{{item.code}}</td>
+            <td ng-show="editMode"><input class="form-control" type="text" ng-model="item.code"></td>
+        </tr>
+        <tr>
+            <td>Harga</td>
+            <td ng-hide="editMode">{{item.price}}</td>
+            <td ng-show="editMode"><input class="form-control" type="number" ng-model="item.price"></td>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td ng-hide="editMode">{{item.balance}}</td>
+            <td ng-show="editMode"><input class="form-control" type="number" ng-model="item.price"></td>
+        </tr>
+    </table>
+</div>

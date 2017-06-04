@@ -1,0 +1,12 @@
+<div class="modal-body" id="modal-body">
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="3">Stock masuk <strong>{{receipt.date | date:'MMM dd,  yyyy HH:mm '}}</strong></td>
+        </tr>
+        <tr ng-repeat= "receiptItem in receipt.receiptItems">
+            <td>{{receiptItem.item.name}} </td>
+            <td>{{receiptItem.item.code}}</td>
+            <td>{{receiptItem.qty}} potong</td>
+        </tr>
+    </table>
+</div>

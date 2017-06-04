@@ -1,0 +1,18 @@
+<button class="btn btn-primary" ui-sref="nav">home</button>
+<input ng-model="search.name"><button class="btn btn-success" ng-click="newSale()">Penjualan</button>
+<table class="table table-hover table-nonfluid small">
+    <tr ng-repeat="sale in sales|startFrom :(currentPage - 1)*pageSize|limitTo:pageSize" ng-click="selectSale(sale)">
+        <td>{{sale.date | date:'HH:mm MMM dd,  yyyy'}}</td>
+        <td>
+            <table class="table table-borderless">
+                <tr ng-repeat="saleItem in sale.saleItems">
+                    <td>{{saleItem.item.name}}</td> 
+                    <td><strong class="text-danger">{{saleItem.item.code}}</strong></td>
+                    <td>{{saleItem.qty}} potong</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<ul uib-pagination total-items="sales.length" ng-model="currentPage" items-per-page="pageSize"></ul>

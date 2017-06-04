@@ -1,0 +1,14 @@
+<div class="modal-body" id="modal-body">
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="3">Penjualan 
+            	<strong>{{sale.date | date:'MMM dd,  yyyy HH:mm '}}</strong>
+            </td>
+        </tr>
+        <tr ng-repeat= "saleItem in sale.saleItems">
+            <td>{{saleItem.item.name}} </td>
+            <td>{{saleItem.item.code}}</td>
+            <td>{{saleItem.qty}} potong</td>
+        </tr>
+    </table>
+</div>
